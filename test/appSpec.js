@@ -1,12 +1,14 @@
-define(['app', 'jquery'], function(App, $) {
+define(['src/app', 'jquery'], function (App, $) {
 
-    QUnit.module("App module testing", {});
+    QUnit.test("Dummy test", function (assert) {
+        assert.ok(1 == '1', "Passed!");
+    });
 
-    QUnit.test("Test render", function (assert) {
+    QUnit.test('App render', function (assert) {
+        var newApp = new App(document.getElementById('qunit-fixture'));
 
-        var myApp = new App(document.getElementById('qunit-fixture'));
-        myApp.render();
+        newApp.render();
 
-        assert.equal($('#qunit-fixture').text() == 'RequireJS up and running');
+        assert.equal($('#qunit-fixture').text(), 'RequireJS up and running');
     });
 });
