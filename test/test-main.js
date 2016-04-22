@@ -24,6 +24,13 @@ require.config({
     // dynamically load all test files
     deps: allTestFiles,
 
-    // we have to kickoff jasmine, as it is asynchronous
-    callback: window.__karma__.start
+    // Kickoff test with a little trick to make things work smoothly with Squire.js
+    // @see: https://github.com/iammerrick/Squire.js/issues/31
+    callback: function () {
+        var alreadyRun = window.alreadyRun || false;
+        if (!alreadyRun) {
+            window.alreadyRun = true;
+            window.__karma__.start();
+        }
+    }
 });
