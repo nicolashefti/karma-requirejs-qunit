@@ -9,11 +9,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "jasmine-core": "^2.4.1",
     "karma": "^0.13.21",
     "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.8",
     "karma-qunit": "^0.1.9",
-    "karma-requirejs": "^0.2.5",
-    "qunit": "^0.9.0",
-    "qunitjs": "^1.22.0"
+    "karma-requirejs": "^0.2.5"
   }
 }

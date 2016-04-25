@@ -6,19 +6,13 @@
   "description": "Using karma with RequireJs and QUnit",
   "main": "",
   "moduleType": [
-    "amd",
-    "globals"
+    "amd"
   ],
   "homepage": "http://nicolas.hefti.fr",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
   "dependencies": {
     "requirejs": "^2.1.22",
-    "jquery": "^2.2.1"
+  },
+  "devDependencies": {
+    "Squire.js": "squire#^0.2.0"
   }
 }

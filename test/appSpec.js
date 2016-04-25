@@ -1,14 +1,25 @@
-define(['src/app', 'jquery'], function (App, $) {
+define(['src/app'], function (App) {
 
-    QUnit.test("Dummy test", function (assert) {
-        assert.ok(1 == '1', "Passed!");
+    var fixtureDiv;
+
+    beforeEach(function () {
+        fixtureDiv = document.createElement('div');
+        fixtureDiv.setAttribute('id', 'fixture-div');
     });
 
-    QUnit.test('App render', function (assert) {
-        var newApp = new App(document.getElementById('qunit-fixture'));
+    describe('Dummy test', function () {
+        it('should be always a big test success', function () {
+            expect(true).toEqual(1 > 0);
+        });
+    });
 
-        newApp.render();
+    describe('App bootstrap', function () {
+        it('should render a message in the fixture div', function () {
 
-        assert.equal($('#qunit-fixture').text(), 'RequireJS up and running');
+            var newApp = new App(fixtureDiv);
+            newApp.render();
+
+            expect(fixtureDiv.innerHTML).toEqual('RequireJS up and running');
+        });
     });
 });

@@ -18,7 +18,7 @@ require.config({
 
 
     paths: {
-        'jquery': 'lib/jquery/dist/jquery'
+        'squire': 'lib/Squire.js/src/Squire'
     },
 
     // dynamically load all test files
